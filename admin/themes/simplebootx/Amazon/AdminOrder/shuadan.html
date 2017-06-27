@@ -65,7 +65,7 @@
 				州：<input type="text" name="account[province]" value="{$account.province}" required placeholder="州信息" style="width: 50px">
 				帐号地址信息：<input type="text" name="account[address]" value="{$account.address}">
 				<font color="red">邮箱：</font> <input type="text" name="account[email]" value="{$account.email}" <?php if($account['email'] != "") {?> disabled="true" <?php }?>>
-
+				<font color="red">信用卡：</font> <input type="text" name="account[credit]" value="{$account.credit}" <?php if($account['credit'] != "") {?> disabled="true" <?php }?>>
 				<button type="submit" class="btn btn-primary js-ajax-submit" data-action="{:U('AdminOrder/shuadan_post')}"data-msg="你确定提交并刷下一单吗？">保存，刷下一单</button>
 
 			</div>
