@@ -35,6 +35,7 @@ class WxAiController extends HomebaseController {
 			if($_POST['debug'] == '') $debug = false;
 			else $debug = true;
 			$iid = "";
+			$qq ='0';
 			if($wxgroup != ''){
 				$proxy = M("TbkqqProxy")->where(array("wxgroup"=>$wxgroup))->find();
 				if($proxy) {$g ="1";}
@@ -180,6 +181,7 @@ class WxAiController extends HomebaseController {
 											if($eventRate != ''){
 												if($rate<$eventRate){
 													$rate = $eventRate;
+													$qq = '1';
 												}
 											}
 
@@ -192,6 +194,7 @@ class WxAiController extends HomebaseController {
 										if($eventRate != ''){
 											if($rate<$eventRate){
 												$rate = $eventRate;
+												$qq = '1';
 											}
 										}
 									}
@@ -277,7 +280,7 @@ class WxAiController extends HomebaseController {
 									}
 
 									if($activityId == ""){
-										if($eventRate>$rate)
+										if($qq == '1')
 											$u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=3&channel=tk_qqhd&t=$t";
 										else
 											$u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=1&t=$t";
@@ -317,7 +320,7 @@ class WxAiController extends HomebaseController {
 										else echo "@" . $proxywx . ": 找不到t这个链接，可能机器人掉线了，请联系人工客服";
 									}
 									else {
-										if($eventRate>$rate)
+										if($qq == '1')
 											$dx = "0";
 										else $dx = "1";
 										$link = "https://uland.taobao.com/coupon/edetail?activityId=" .$activityId ."&pid=" . $pid ."&itemId=" . $iid ."&src=qhkj_dtkp&dx=" . $dx;
@@ -583,7 +586,7 @@ class WxAiController extends HomebaseController {
 			$proxywx = $_POST['proxywx'];
 			$wxgroup = $_POST['group'];
 			$iid = $_POST['iid'];
-
+            $qq ='0';
 			if($wxgroup != ''){
 				$proxy = M("TbkqqProxy")->where(array("wxgroup"=>$wxgroup))->find();
 				if($proxy) {$g ="1";}
@@ -704,6 +707,7 @@ class WxAiController extends HomebaseController {
                                         if ($eventRate != '') {
                                             if ($rate < $eventRate) {
                                                 $rate = $eventRate;
+                                                $qq ='1';
                                             }
                                         }
 
@@ -715,6 +719,7 @@ class WxAiController extends HomebaseController {
                                     if ($eventRate != '') {
                                         if ($rate < $eventRate) {
                                             $rate = $eventRate;
+                                            $qq = '1';
                                         }
                                     }
                                 }
@@ -786,7 +791,7 @@ class WxAiController extends HomebaseController {
                                 }
 
                                 if ($activityId == "") {
-                                    if ($eventRate > $rate)
+                                    if ($qq == '1')
                                         $u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=3&channel=tk_qqhd&t=$t";
                                     else
                                         $u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=1&t=$t";
@@ -823,7 +828,7 @@ class WxAiController extends HomebaseController {
                                         }
                                     } else echo "找不到这个链接，可能机器人掉线了，请联系人工客服c!";
                                 } else {
-                                    if ($eventRate > $rate)
+                                    if ($qq == '1')
                                         $dx = "0";
                                     else $dx = "1";
                                     $link = "https://uland.taobao.com/coupon/edetail?activityId=" . $activityId . "&pid=" . $pid . "&itemId=" . $iid . "&src=qhkj_dtkp&dx=" . $dx;
@@ -989,6 +994,7 @@ class WxAiController extends HomebaseController {
             $proxywx = $_POST['proxywx'];
             $wxgroup = $_POST['group'];
 
+            $qq = '0';
             if($wxgroup != ''){
                 $proxy = M("TbkqqProxy")->where(array("wxgroup"=>$wxgroup))->find();
                 if($proxy) {$g ="1";}
@@ -1085,6 +1091,7 @@ class WxAiController extends HomebaseController {
                                         if($eventRate != ''){
                                             if($rate<$eventRate){
                                                 $rate = $eventRate;
+                                                $qq ='1';
                                             }
                                         }
 
@@ -1097,6 +1104,7 @@ class WxAiController extends HomebaseController {
                                     if($eventRate != ''){
                                         if($rate<$eventRate){
                                             $rate = $eventRate;
+                                            $qq = '1';
                                         }
                                     }
                                 }
@@ -1159,7 +1167,7 @@ class WxAiController extends HomebaseController {
 
 
                                 if($activityId == ""){
-                                    if($eventRate>$rate)
+                                    if($qq=='1')
                                         $u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=3&channel=tk_qqhd&t=$t";
                                     else
                                         $u = "http://pub.alimama.com/common/code/getAuctionCode.json?auctionid=$iid&adzoneid=$adid&siteid=$mediaid&scenes=1&t=$t";
@@ -1199,7 +1207,7 @@ class WxAiController extends HomebaseController {
                                     else echo "@" . $proxywx . ": 找不到t这个链接，可能机器人掉线了，请联系人工客服";
                                 }
                                 else {
-                                    if($eventRate>$rate)
+                                    if($qq == '1')
                                         $dx = "0";
                                     else $dx = "1";
                                     $link = "https://uland.taobao.com/coupon/edetail?activityId=" .$activityId ."&pid=" . $pid ."&itemId=" . $iid ."&src=qhkj_dtkp&dx=" . $dx;
