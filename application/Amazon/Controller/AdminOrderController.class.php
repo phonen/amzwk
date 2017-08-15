@@ -475,7 +475,7 @@ else {
 			$assign_order['product'] = $product['product'];
 			$assign_order['shop'] = $product['shop'];
 			$assign_order['asin'] = $product['asin'];
-			$assign_order['keyword'] = $product['keyword'];
+			$assign_order['keyword'] = str_replace("\n","<br>",$product['keyword']);
 			$assign_order['amount'] = $product['amount'];
 			$this->order_model->where(array("id"=>$order['id']))->save(array("status"=>"1","userid"=>$_SESSION['name']));
 			$assign_order['cardno'] = $order['cardno'];
