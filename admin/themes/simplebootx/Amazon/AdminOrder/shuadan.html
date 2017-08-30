@@ -63,6 +63,8 @@
 				账户余额:<input type="text" name="account[amount]" value="{$account.amount}"  required placeholder="帐号余额" style="width: 80px">
 				代理IP:<input type="text" name="account[lastip]" value="" required placeholder="代理IP" style="width: 100px">
 				评论：<select class="select_2" style="width:500px" name="account[review]">
+				<option value="" <?php if($account['review'] == "") {?> selected <?php }?>></option>
+				<option value="0" <?php if($account['review'] == "0") {?> selected <?php }?>>不能</option>
 					<option value="1" <?php if($account['review'] == "1") {?> selected <?php }?>>可以</option>
 				<option value="0" <?php if($account['review'] == "0") {?> selected <?php }?>>不能</option>
 				</select> &nbsp;&nbsp;
