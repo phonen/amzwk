@@ -39,7 +39,8 @@ class AdminCardController extends AdminbaseController {
 					if($operator=="like"){
 						$get="%$get%";
 					}
-					array_push($where_ands, "$field $operator '$get'");
+					if($field == 'amount')array_push($where_ands, "$field $operator $get");
+					else array_push($where_ands, "$field $operator '$get'");
 				}
 			}
 		}
@@ -52,7 +53,8 @@ class AdminCardController extends AdminbaseController {
 					if($operator=="like"){
 						$get="%$get%";
 					}
-					array_push($where_ands, "$field $operator '$get'");
+                    if($field == 'amount')array_push($where_ands, "$field $operator $get");
+                    else array_push($where_ands, "$field $operator '$get'");
 				}
 			}
 		}
