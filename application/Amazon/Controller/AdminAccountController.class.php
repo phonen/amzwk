@@ -23,7 +23,7 @@ class AdminAccountController extends AdminbaseController {
 		$this->assign("review",$_REQUEST["review"]);
         $_GET['review']=$_REQUEST["review"];
 
-        if($_REQUEST["review"] != "")array_push($where_ands,array("review='" .  $_REQUEST['review'] . "'"));
+        if($_REQUEST["review"] != "")array_push($where_ands,"review='" .  $_REQUEST['review'] . "'");
 		$fields=array(
 			'startdate'=> array("field"=>"lasttime","operator"=>">="),
 			'enddate'=> array("field"=>"lasttime","operator"=>"<="),
