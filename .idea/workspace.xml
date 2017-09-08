@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3bdc2ce9-8b1a-4053-bc17-8c1a4ed0fce3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php" afterPath="$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,21 +25,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminAccountController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminAccountController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+            <state relative-caret-position="513">
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -81,8 +81,8 @@
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html" />
         <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminCardController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html" />
-        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html" />
+        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php" />
       </list>
     </option>
   </component>
@@ -448,7 +448,7 @@
       <workItem from="1504110117273" duration="860000" />
       <workItem from="1504161120860" duration="623000" />
       <workItem from="1504841634099" duration="931000" />
-      <workItem from="1504842583707" duration="279000" />
+      <workItem from="1504842583707" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1498542079145</created>
@@ -513,11 +513,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504842763289</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1">
+      <created>1504842871269</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1504842871269</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16637000" />
+    <option name="totallyTimeSpent" value="16764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1873" height="1212" extended-state="6" />
@@ -932,18 +939,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php">
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="24" column="107" lean-forward="false" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+        <state relative-caret-position="486">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html">
+    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="54" lean-forward="false" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state relative-caret-position="513">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
