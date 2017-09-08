@@ -21,7 +21,8 @@ class AdminAccountController extends AdminbaseController {
 		$where_ands=empty($_REQUEST["status"])?array("status='1'"):array("status='" .  $_REQUEST['status'] . "'");
         $this->assign("review",$_REQUEST["review"]);
         $_GET['review']=$_REQUEST["review"];
-        if(!empty($_REQUEST["status"]))array_push($where_ands,array("review='" .  $_REQUEST['review'] . "'"));
+
+        if($_REQUEST["status"] != "")array_push($where_ands,array("review='" .  $_REQUEST['review'] . "'"));
 		$fields=array(
 			'startdate'=> array("field"=>"lasttime","operator"=>">="),
 			'enddate'=> array("field"=>"lasttime","operator"=>"<="),
