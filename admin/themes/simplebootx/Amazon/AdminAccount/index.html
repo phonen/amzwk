@@ -20,9 +20,9 @@
 
         评论：
         <select class="select_2" name="review">
-            <option value='' <php>if($formget['status'] == "") echo "selected=true";</php> ></option>
+            <option value='' <php>if($formget['review'] == "") echo "selected=true";</php> ></option>
             <option value='1' <php>if($formget['review'] == "1") echo "selected=true";</php> >可以</option>
-            <option value='0' <php>if($formget['status'] == "0") echo "selected=true";</php>  >不能</option>
+            <option value='0' <php>if($formget['review'] == "0") echo "selected=true";</php>  >不能</option>
 
         </select> &nbsp;&nbsp;
         <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="act" value="export">导出
