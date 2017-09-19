@@ -67,6 +67,16 @@
 						</select> &nbsp;&nbsp;
 					</div>
 				</div>
+				<div class="control-group">
+					<label class="control-label">评论：</label>
+					<div class="controls">
+						<select class="select_2" name="account[review]">
+							<option value='' <php>if($formget['status'] == "") echo "selected=true";</php> ></option>
+							<option value='1' <php>if($formget['status'] == "1") echo "selected=true";</php>  >可以</option>
+							<option value='0' <php>if($formget['status'] == "0") echo "selected=true";</php> >不能评</option>
+						</select> &nbsp;&nbsp;
+					</div>
+				</div>
 			</fieldset>
 			<div class="form-actions">
 				<input type="hidden" name="account[id]" value="{$account.id}" />
