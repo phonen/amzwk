@@ -365,7 +365,10 @@ class AdminOrderController extends AdminbaseController {
 		if(IS_POST){
 			$id=intval(I("post.id"));
 			$username = I("post.username");
+			$review = I("post.review");
+			if($username != "")
 			$wheres[] = " username like '" . $username . "'";
+			if($review != "")$wheres[] = " review = '" . $review . "'";
 		}
 else {
 	$id=  intval(I("get.id"));
@@ -556,6 +559,7 @@ else {
 		$order['password'] = $account['password'];
 		$order['product'] = $product['product'];
 		$order['astatus'] = $account['status'];
+		$order['amount'] = $account['amount'];
 $order['province'] = $account['province'];
 		$this->assign("order",$order);
 		$this->display();
