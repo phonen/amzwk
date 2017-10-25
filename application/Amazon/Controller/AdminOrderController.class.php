@@ -477,6 +477,7 @@ else {
 			$product = M("AmazonProduct")->where(array("id"=>$order['p_id']))->find();
 			$assign_order['product'] = $product['product'];
 			$assign_order['shop'] = $product['shop'];
+			$assign_order['customer'] = $product['customer'];
 			$assign_order['asin'] = $product['asin'];
 			$assign_order['keyword'] = str_replace("\n","<br>",$product['keyword']);
 			$assign_order['amount'] = $product['amount'];
