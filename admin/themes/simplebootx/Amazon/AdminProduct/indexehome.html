@@ -14,7 +14,8 @@
         <input type="text" name="asin" style="width: 200px;" value="{$formget.asin}" placeholder="请输入ASIN...">&nbsp; &nbsp;
         店铺：
         <input type="text" name="shop" style="width: 200px;" value="{$formget.shop}" placeholder="请输入店铺...">&nbsp; &nbsp;
-
+        客户信息：
+        <input type="text" name="shop" style="width: 200px;" value="{$formget.customer}" placeholder="请输入客户信息...">&nbsp;
         <input type="submit" class="btn btn-primary" value="搜索" />
 
     </form>
@@ -32,6 +33,7 @@
                 <th width="80">刷单金额</th>
                 <th width="80">使用地址</th>
                 <th width="80">店铺</th>
+                <th width="80">客户信息</th>
                 <th>操作</th>
             </tr>
             </thead>
@@ -47,6 +49,7 @@
                     <php>$status=array("1"=>"使用","0"=>"不用");</php>
                     <td>{$status[$vo['ups']]}</td>
                     <td>{$vo.shop}</td>
+                    <td>{$vo.customer}</td>
                     <td>
                         <a href="{:U('AdminProduct/edit',array('id'=>$vo['id']))}">{:L('EDIT')}</a> |
                         <a href="{:U('AdminProduct/delete',array('id'=>$vo['o_id']))}" class="js-ajax-delete">{:L('DELETE')}</a>

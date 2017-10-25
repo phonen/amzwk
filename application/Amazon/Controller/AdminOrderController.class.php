@@ -489,7 +489,7 @@ else {
 
 		$this->assign("orders",$assign_orders);
 		$this->assign("account",$account);
-		$this->display();
+		$this->display("shuadan1");
 
 	}
 

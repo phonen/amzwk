@@ -28,32 +28,47 @@
 						<td colspan="5"><font color="red" >   {$type[$vo['type']]}   </font></td>
 					</tr>
 					<tr>
-						<td rowspan="2">{$vo.id}</td>
-						<td>地    址:{$vo.address}</td>
-
-						<td>卖家产品:{$vo.product}</td>
-						<td>ASIN:{$vo.asin}</td>
-						<td>关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
+						<td rowspan="5">{$vo.id}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">地    址:{$vo.address}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">卖家产品:{$vo.product}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">ASIN:{$vo.asin}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
 					</tr>
 					<tr>
 
-						<td>刷单金额:<font color="red">{$vo.amount}</font> </td>
-						<td>
+						<td rowspan="5">刷单金额:<font color="red">{$vo.amount}</font> </td>
+					</tr>
+					<tr>
+						<td rowspan="5">
 						<php> if($vo['type'] == 'b') {</php>
 							充值卡:<input type="text" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
 						<php>} else {</php>
 							<input type="hidden" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
 							<php>}</php>
 						</td>
-
-						<td>
+					</tr>
+					<tr>
+						<td rowspan="5">
 							<php> if($vo['type'] == 'b') {</php>
 							亚马逊单号:<input type="text" name="order[{$vo.id}][orderid]" value="">
 							<php>} else {</php>
 							<input type="hidden" name="order[{$vo.id}][orderid]" value="">
 							<php>}</php>
 						</td>
-						<td>卖家店铺：{$vo.shop}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">卖家店铺：{$vo.shop}</td>
+					</tr>
+					<tr>
+						<td rowspan="5">客户信息：{$vo.customer}</td>
 					</tr>
 				</foreach>
 				</tbody>

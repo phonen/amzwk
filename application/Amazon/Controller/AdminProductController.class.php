@@ -20,6 +20,7 @@ class AdminProductController extends AdminbaseController {
 			'product'=> array("field"=>"product","operator"=>"like"),
 			'asin'=> array("field"=>"asin","operator"=>"like"),
 			'shop'=> array("field"=>"shop","operator"=>"like"),
+            'customer'=> array("field"=>"customer","operator"=>"like"),
 		);
 		if(IS_POST){
 			foreach ($fields as $param =>$val){
@@ -69,6 +70,7 @@ class AdminProductController extends AdminbaseController {
 			'product'=> array("field"=>"product","operator"=>"like"),
 			'asin'=> array("field"=>"asin","operator"=>"like"),
 			'shop'=> array("field"=>"shop","operator"=>"like"),
+            'customer'=> array("field"=>"customer","operator"=>"like"),
 		);
 		if(IS_POST){
 			foreach ($fields as $param =>$val){
