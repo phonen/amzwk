@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdc2ce9-8b1a-4053-bc17-8c1a4ed0fce3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,16 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminCard/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,51 +50,59 @@
       <file leaf-file-name="AdminOrderController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="381" column="38" lean-forward="true" selection-start-line="381" selection-start-column="38" selection-end-line="381" selection-end-column="38" />
+            <state relative-caret-position="594">
+              <caret line="478" column="29" lean-forward="true" selection-start-line="478" selection-start-column="29" selection-end-line="478" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="change.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            <state relative-caret-position="609">
+              <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminProductController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="56" column="22" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="56" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="58" column="22" lean-forward="false" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminProductController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-2916">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shuadan_index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan_index.html">
+      <file leaf-file-name="shuadan1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shuadan.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="68" column="98" lean-forward="false" selection-start-line="68" selection-start-column="98" selection-end-line="68" selection-end-column="98" />
-              <folding>
-                <element signature="e#2582#2588#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -126,15 +126,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/application/Tbkqq/Controller/WxAiController.class.php" />
-        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html" />
-        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html" />
         <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminCardController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/index.html" />
         <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminAccountController.class.php" />
         <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminAccount/edit.html" />
-        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html" />
+        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html" />
+        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html" />
+        <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html" />
       </list>
     </option>
   </component>
@@ -464,6 +464,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\gitwork\amzwk\admin\themes\simplebootx\Amazon\AdminOrder" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -505,7 +510,7 @@
       <workItem from="1508403731923" duration="1729000" />
       <workItem from="1508459057562" duration="2920000" />
       <workItem from="1508893691679" duration="38000" />
-      <workItem from="1508895867995" duration="1153000" />
+      <workItem from="1508895867995" duration="3402000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1498542079145</created>
@@ -612,11 +617,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508896531465</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="1">
+      <created>1508897031913</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1508897031913</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23179000" />
+    <option name="totallyTimeSpent" value="25428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -657,14 +669,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminCard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
@@ -715,6 +719,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3105">
           <caret line="121" column="43" lean-forward="true" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -934,20 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -959,6 +950,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="56" column="76" lean-forward="false" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,7 +994,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1012,13 +1004,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="381" column="38" lean-forward="true" selection-start-line="381" selection-start-column="38" selection-end-line="381" selection-end-column="38" />
+        <state relative-caret-position="594">
+          <caret line="478" column="29" lean-forward="true" selection-start-line="478" selection-start-column="29" selection-end-line="478" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan_index.html">
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1419">
+          <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding>
+            <element signature="e#2582#2588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1026,20 +1028,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan.html">
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="68" column="98" lean-forward="false" selection-start-line="68" selection-start-column="98" selection-end-line="68" selection-end-column="98" />
-          <folding>
-            <element signature="e#2582#2588#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="609">
+          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/change.html">
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state relative-caret-position="663">
+          <caret line="56" column="22" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="56" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="58" column="22" lean-forward="false" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2916">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
