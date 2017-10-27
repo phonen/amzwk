@@ -13,7 +13,7 @@
 					<th width="30">ID:</th>
 					<th width="200">用户名:<br><php>echo trim($account['username']);</php></th>
 					<th width="130">密码:<br><php>echo trim($account['password']);</php></th>
-					<th width="80">记录人:{$userid}</th>
+					<th width="80">记录人:   {$userid}</th>
 					<th width="100">虚拟机编号：  {$account['vm_num']} </th>
 
 
@@ -29,53 +29,45 @@
 						<td colspan="5"><font color="red" >   {$type[$vo['type']]}   </font></td>
 					</tr>
 					<tr>
-						<td colspan="5">{$vo.id}</td>
+						<td>{$vo.id}</td>
+						<td colspan="2">地    址:  {$vo.address}</td>
+
+						<td>卖家产品:   {$vo.product}</td>
+						<td>ASIN:   {$vo.asin}</td>
 					</tr>
 					<tr>
-						<td colspan="5">地    址:{$vo.address}</td>
+						<td colspan="3">关键字:  {$vo.keyword}<font color="red" > {$vo.memo}</font></td>
 					</tr>
 					<tr>
-						<td colspan="5">卖家产品:{$vo.product}</td>
+						<td>刷单要求:   {$vo.keyword_op}</td>
 					</tr>
 					<tr>
-						<td colspan="5">ASIN:{$vo.asin}</td>
-					</tr>
-					<tr>
-						<td colspan="5">关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
-					</tr>
-					<tr>
-						<td colspan="5">刷单要求:{$vo.keyword_op}<font color="red" >{$vo.memo}</font></td>
-					</tr>
-					<tr>
-						<td colspan="5">产品位置:{$vo.keyword_pos}<font color="red" >{$vo.memo}</font></td>
+						<td>产品位置:   {$vo.keyword_pos}</td>
 					</tr>
 					<tr>
 
-						<td colspan="5">刷单金额:<font color="red">{$vo.amount}</font> </td>
-					</tr>
-					<tr>
-						<td colspan="5">
+						<td colspan="2">刷单金额:   <font color="red">{$vo.amount}</font> </td>
+
+						<td colspan="3">
 						<php> if($vo['type'] == 'b') {</php>
-							充值卡:<input type="text" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
+							充值卡:   <input type="text" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
 						<php>} else {</php>
 							<input type="hidden" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
 							<php>}</php>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="5">
+						<td colspan="3">
 							<php> if($vo['type'] == 'b') {</php>
-							亚马逊单号:<input type="text" name="order[{$vo.id}][orderid]" value="">
+							亚马逊单号:   <input type="text" name="order[{$vo.id}][orderid]" value="">
 							<php>} else {</php>
 							<input type="hidden" name="order[{$vo.id}][orderid]" value="">
 							<php>}</php>
 						</td>
-					</tr>
-					<tr>
-						<td colspan="5">卖家店铺：{$vo.shop}</td>
-					</tr>
-					<tr>
-						<td colspan="5">客户信息：{$vo.customer}</td>
+
+						<td>卖家店铺： {$vo.shop}</td>
+
+						<td>客户信息：{$vo.customer}</td>
 					</tr>
 				</foreach>
 				</tbody>
