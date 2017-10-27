@@ -25,6 +25,7 @@ class AdminOrderController extends AdminbaseController {
             $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
             $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
+            $data['vm_num'] = str_replace(",","<br>",$data['vm_num']);
             $orders_assign[]=$data;
         }
 		$products = M("AmazonProduct")->select();
@@ -64,6 +65,7 @@ class AdminOrderController extends AdminbaseController {
             $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
             $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
+            $data['vm_num'] = str_replace(",","<br>",$data['vm_num']);
             $orders_assign[]=$data;
         }
 		$products = M("AmazonProduct")->select();
@@ -179,6 +181,7 @@ class AdminOrderController extends AdminbaseController {
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
 			$data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
             $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
+            $data['vm_num'] = str_replace(",","<br>",$data['vm_num']);
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
@@ -275,6 +278,7 @@ class AdminOrderController extends AdminbaseController {
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
             $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
+            $data['vm_num'] = str_replace(",","<br>",$data['vm_num']);
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
@@ -493,6 +497,7 @@ else {
 		$id=  intval(I("get.id"));
 		$a_id = $this->order_model->where("id=$id")->getField('a_id');
 		$account = M("AmazonAccount")->where("id=$a_id")->find();
+        $account['vm_num'] = str_replace(",","<br>",$account['vm_num']);
 //		$orders = $this->order_model->join('cmf_amazon_product ON cmf_amazon_order.p_id = cmf_amazon_product.id')->where("cmf_amazon_order.a_id=$a_id and (cmf_amazon_order.status='0' or (cmf_amazon_order.status='1' and cmf_amazon_order.userid='" . $_SESSION['name'] . "'))")->select();
 		$orders = $this->order_model->where("a_id=$a_id and (status='0' or (status='1' and userid='" . $_SESSION['name'] ."'))")->select();
 		foreach($orders as $order){

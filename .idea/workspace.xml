@@ -4,6 +4,7 @@
     <list default="true" id="3bdc2ce9-8b1a-4053-bc17-8c1a4ed0fce3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php" afterPath="$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,12 +15,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="shuadan1.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="shuadan1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1971">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state relative-caret-position="432">
+              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#input#5;n#div#0;n#form#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminOrderController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminOrderController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="276" column="106" lean-forward="false" selection-start-line="276" selection-start-column="106" selection-end-line="276" selection-end-column="106" />
+            <state relative-caret-position="108">
+              <caret line="499" column="72" lean-forward="false" selection-start-line="499" selection-start-column="72" selection-end-line="499" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -71,8 +72,8 @@
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/indexehome.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan_index.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan_indexehome.html" />
-        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html" />
+        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php" />
       </list>
     </option>
   </component>
@@ -104,6 +105,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,8 +397,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,7 +452,8 @@
       <workItem from="1508895867995" duration="4748000" />
       <workItem from="1509065711548" duration="2926000" />
       <workItem from="1509071287508" duration="749000" />
-      <workItem from="1509091553147" duration="1991000" />
+      <workItem from="1509091553147" duration="2042000" />
+      <workItem from="1509094472220" duration="843000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1498542079145</created>
@@ -621,11 +623,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509093524491</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1">
+      <created>1509093689229</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1509093689229</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32440000" />
+    <option name="totallyTimeSpent" value="33334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -986,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="891">
           <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,15 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="276" column="106" lean-forward="false" selection-start-line="276" selection-start-column="106" selection-end-line="276" selection-end-column="106" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
           <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="72" column="20" lean-forward="true" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,17 +1023,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="837">
           <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1971">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="432">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#input#5;n#div#0;n#form#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminOrderController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="499" column="72" lean-forward="false" selection-start-line="499" selection-start-column="72" selection-end-line="499" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>

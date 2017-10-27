@@ -10,7 +10,7 @@
 			<table class="table table-hover table-bordered table-list">
 				<thead>
 				<tr>
-					<th width="30">ID:</th>
+					<th width="30"></th>
 					<th width="200">用户名:<br><php>echo trim($account['username']);</php></th>
 					<th width="130">密码:<br><php>echo trim($account['password']);</php></th>
 					<th width="80">记录人:   {$userid}</th>
@@ -26,10 +26,10 @@
 
 					<tr>
 
-						<td colspan="5"><font color="red" >   {$type[$vo['type']]}   </font></td>
+						<td colspan="5"><font color="red" > 你正在进行  {$type[$vo['type']]}   </font></td>
 					</tr>
 					<tr>
-						<td>{$vo.id}</td>
+						<td>刷单ID:  {$vo.id}</td>
 						<td colspan="2">地    址:  {$vo.address}</td>
 
 						<td>卖家产品:   {$vo.product}</td>
