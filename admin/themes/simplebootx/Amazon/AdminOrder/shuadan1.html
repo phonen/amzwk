@@ -39,7 +39,7 @@
 						<td colspan="3">关键字:  {$vo.keyword}<font color="red" > {$vo.memo}</font></td>
 
 						<td>刷单要求:   {$vo.keyword_op}</td>
-					
+
 						<td>产品位置:   {$vo.keyword_pos}</td>
 					</tr>
 					<tr>
@@ -81,10 +81,12 @@
 				<option value="2" <?php if($account['review'] == "2") {?> selected <?php }?>>信用卡可评</option>
 
 				</select>
-				<br>&nbsp;&nbsp;
+				<br>
+				<font color="red">邮箱：</font> <input type="text" name="account[email]" value="{$account.email}" <?php if($account['email'] != "") {?> disabled="true" <?php }?>>&nbsp;&nbsp;
 				州：<input type="text" name="account[province]" value="{$account.province}" required placeholder="州信息" style="width: 50px">
-				帐号地址信息：<input type="text" name="account[address]" value="{$account.address}">
-				<font color="red">邮箱：</font> <input type="text" name="account[email]" value="{$account.email}" <?php if($account['email'] != "") {?> disabled="true" <?php }?>>
+				<br>
+				帐号地址信息：<input type="text" name="account[address]" value="{$account.address}" style="width: 100px">
+
 				<br>
 				<font color="red">信用卡：</font> <input type="text" name="account[credit]" value="{$account.credit}" <?php if($account['credit'] != "") {?> disabled="true" <?php }?>>
 				信用卡累计金额： <input type="text" name="account[credit_amount]" value="{$account.credit_amount}">
