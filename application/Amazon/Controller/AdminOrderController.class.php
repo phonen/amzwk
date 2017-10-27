@@ -24,6 +24,7 @@ class AdminOrderController extends AdminbaseController {
             $data = $order;
             $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
             $orders_assign[]=$data;
         }
 		$products = M("AmazonProduct")->select();
@@ -62,6 +63,7 @@ class AdminOrderController extends AdminbaseController {
             $data = $order;
             $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
             $orders_assign[]=$data;
         }
 		$products = M("AmazonProduct")->select();
@@ -176,6 +178,7 @@ class AdminOrderController extends AdminbaseController {
 			$data = $order;
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
 			$data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
@@ -271,6 +274,7 @@ class AdminOrderController extends AdminbaseController {
 			$data = $order;
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
             $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $data['vm_num'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("vm_num");
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
@@ -502,6 +506,8 @@ else {
 			$assign_order['customer'] = $product['customer'];
 			$assign_order['asin'] = $product['asin'];
 			$assign_order['keyword'] = str_replace("\n","<br>",$product['keyword']);
+            $assign_order['keyword_op'] = str_replace("\n","<br>",$product['keyword_op']);
+            $assign_order['keyword_pos'] = str_replace("\n","<br>",$product['keyword_pos']);
 			$assign_order['amount'] = $product['amount'];
 			$this->order_model->where(array("id"=>$order['id']))->save(array("status"=>"1","userid"=>$_SESSION['name']));
 			$assign_order['cardno'] = $order['cardno'];

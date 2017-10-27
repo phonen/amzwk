@@ -21,6 +21,10 @@
 				</tr>
 				</thead>
 				<tbody>
+				<tr>
+
+					<td colspan="5"><font color="red" > 虚拟机编号：  {$account['vm_num']}   </font></td>
+				</tr>
 				<foreach name="orders" item="vo">
 
 					<tr>
@@ -41,6 +45,12 @@
 					</tr>
 					<tr>
 						<td rowspan="5">关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
+					</tr>
+					<tr>
+						<td rowspan="5">刷单要求:{$vo.keyword_op}<font color="red" >{$vo.memo}</font></td>
+					</tr>
+					<tr>
+						<td rowspan="5">产品位置:{$vo.keyword_pos}<font color="red" >{$vo.memo}</font></td>
 					</tr>
 					<tr>
 

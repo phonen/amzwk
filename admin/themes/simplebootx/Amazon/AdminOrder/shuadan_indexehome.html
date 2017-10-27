@@ -23,7 +23,7 @@
                 <th width="200">购物券</th>
                 <th width="80">账户余额</th>
                 <th width="80">刷单人</th>
-
+                <th width="50">虚拟机编号</th>
                 <th width="180">备注</th>
                 <th width="50">状态</th>
                 <th>操作</th>
@@ -45,6 +45,7 @@
                     <td>{$vo.cardno}</td>
                     <td>{$vo.amount}</td>
                     <td>{$vo.userid}</td>
+                    <td>{$vo.vm_num}</td>
                     <td><font color="red" >{$vo.memo}</font></td>
 
                     <php>$type=array("b"=>"刷单","c"=>"add cart","w"=>"add wishlist");</php>
