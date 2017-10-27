@@ -14,17 +14,14 @@
 					<th width="200">用户名:<br><php>echo trim($account['username']);</php></th>
 					<th width="130">密码:<br><php>echo trim($account['password']);</php></th>
 					<th width="80">记录人:{$userid}</th>
-					<th width="100"></th>
+					<th width="100">虚拟机编号：  {$account['vm_num']} </th>
 
 
 
 				</tr>
 				</thead>
 				<tbody>
-				<tr>
 
-					<td colspan="5"><font color="red" > 虚拟机编号：  {$account['vm_num']}   </font></td>
-				</tr>
 				<foreach name="orders" item="vo">
 
 					<tr>
@@ -32,32 +29,32 @@
 						<td colspan="5"><font color="red" >   {$type[$vo['type']]}   </font></td>
 					</tr>
 					<tr>
-						<td rowspan="5">{$vo.id}</td>
+						<td colspan="5">{$vo.id}</td>
 					</tr>
 					<tr>
-						<td rowspan="5">地    址:{$vo.address}</td>
+						<td colspan="5">地    址:{$vo.address}</td>
 					</tr>
 					<tr>
-						<td rowspan="5">卖家产品:{$vo.product}</td>
+						<td colspan="5">卖家产品:{$vo.product}</td>
 					</tr>
 					<tr>
-						<td rowspan="5">ASIN:{$vo.asin}</td>
+						<td colspan="5">ASIN:{$vo.asin}</td>
 					</tr>
 					<tr>
-						<td rowspan="5">关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
+						<td colspan="5">关键字:{$vo.keyword}<font color="red" >{$vo.memo}</font></td>
 					</tr>
 					<tr>
-						<td rowspan="5">刷单要求:{$vo.keyword_op}<font color="red" >{$vo.memo}</font></td>
+						<td colspan="5">刷单要求:{$vo.keyword_op}<font color="red" >{$vo.memo}</font></td>
 					</tr>
 					<tr>
-						<td rowspan="5">产品位置:{$vo.keyword_pos}<font color="red" >{$vo.memo}</font></td>
+						<td colspan="5">产品位置:{$vo.keyword_pos}<font color="red" >{$vo.memo}</font></td>
 					</tr>
 					<tr>
 
-						<td rowspan="5">刷单金额:<font color="red">{$vo.amount}</font> </td>
+						<td colspan="5">刷单金额:<font color="red">{$vo.amount}</font> </td>
 					</tr>
 					<tr>
-						<td rowspan="5">
+						<td colspan="5">
 						<php> if($vo['type'] == 'b') {</php>
 							充值卡:<input type="text" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">
 						<php>} else {</php>
@@ -66,7 +63,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td rowspan="5">
+						<td colspan="5">
 							<php> if($vo['type'] == 'b') {</php>
 							亚马逊单号:<input type="text" name="order[{$vo.id}][orderid]" value="">
 							<php>} else {</php>
@@ -75,10 +72,10 @@
 						</td>
 					</tr>
 					<tr>
-						<td rowspan="5">卖家店铺：{$vo.shop}</td>
+						<td colspan="5">卖家店铺：{$vo.shop}</td>
 					</tr>
 					<tr>
-						<td rowspan="5">客户信息：{$vo.customer}</td>
+						<td colspan="5">客户信息：{$vo.customer}</td>
 					</tr>
 				</foreach>
 				</tbody>
@@ -93,12 +90,15 @@
 					<option value="1" <?php if($account['review'] == "1") {?> selected <?php }?>>可以</option>
 				<option value="2" <?php if($account['review'] == "2") {?> selected <?php }?>>信用卡可评</option>
 
-				</select> &nbsp;&nbsp;
+				</select>
+				<br>&nbsp;&nbsp;
 				州：<input type="text" name="account[province]" value="{$account.province}" required placeholder="州信息" style="width: 50px">
 				帐号地址信息：<input type="text" name="account[address]" value="{$account.address}">
 				<font color="red">邮箱：</font> <input type="text" name="account[email]" value="{$account.email}" <?php if($account['email'] != "") {?> disabled="true" <?php }?>>
+				<br>
 				<font color="red">信用卡：</font> <input type="text" name="account[credit]" value="{$account.credit}" <?php if($account['credit'] != "") {?> disabled="true" <?php }?>>
 				信用卡累计金额： <input type="text" name="account[credit_amount]" value="{$account.credit_amount}">
+				<br>
 				<button type="submit" class="btn btn-primary js-ajax-submit" data-action="{:U('AdminOrder/shuadan_post')}"data-msg="你确定提交并刷下一单吗？">保存，刷下一单</button>
 
 			</div>
