@@ -18,7 +18,8 @@
                 <th width="100">帐号</th>
 
                 <th width="80">卖家商品</th>
-
+                <th width="50">客户</th>
+                <th width="50">评论</th>
                 <th width="200">购物券</th>
                 <th width="80">账户余额</th>
                 <th width="80">刷单人</th>
@@ -38,7 +39,9 @@
                     <td>{$vo.a_id}</td>
 
                     <td>{$product[$vo[p_id]]}</td>
-
+                    <td>{$customer[$vo['p_id']]}</td>
+                    <php>$review=array("1"=>"可评","0"=>"不能评","2"=>"信用卡可评");</php>
+                    <td>{$review[$vo['review']]}</td>
                     <td>{$vo.cardno}</td>
                     <td>{$vo.amount}</td>
                     <td>{$vo.userid}</td>

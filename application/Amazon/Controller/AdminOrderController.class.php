@@ -20,12 +20,20 @@ class AdminOrderController extends AdminbaseController {
 		$orders=$this->order_model
 			->where($where)->order("rand()")
 			->select();
+        foreach($orders as $order){
+            $data = $order;
+            $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
+            $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $orders_assign[]=$data;
+        }
 		$products = M("AmazonProduct")->select();
 		foreach($products as $product){
 			$producta[$product['id']]=$product['product'];
+            $productb[$product['id']]=$product['customer'];
 		}
-		$this->assign("orders",$orders);
+        $this->assign("orders",$orders_assign);
 		$this->assign("product",$producta);
+        $this->assign("customer",$productb);
 		$this->display();
 	}
 
@@ -50,12 +58,20 @@ class AdminOrderController extends AdminbaseController {
 		$orders=$this->order_model
 			->where($where)->order("rand()")
 			->select();
+        foreach($orders as $order){
+            $data = $order;
+            $data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
+            $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
+            $orders_assign[]=$data;
+        }
 		$products = M("AmazonProduct")->select();
 		foreach($products as $product){
 			$producta[$product['id']]=$product['product'];
+            $productb[$product['id']]=$product['customer'];
 		}
-		$this->assign("orders",$orders);
+		$this->assign("orders",$orders_assign);
 		$this->assign("product",$producta);
+        $this->assign("customer",$productb);
 		$this->display();
 	}
 
@@ -159,17 +175,20 @@ class AdminOrderController extends AdminbaseController {
 		foreach($orders as $order){
 			$data = $order;
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
+			$data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
 		foreach($products as $product){
 			$producta[$product['id']]=$product['product'];
+            $productb[$product['id']]=$product['customer'];
 		}
 		$this->assign("orders",$orders_assign);
 		$this->assign("Page", $page->show('Admin'));
 		$this->assign("current_page",$page->GetCurrentPage());
 		$this->assign("formget",$_GET);
 		$this->assign("product",$producta);
+		$this->assign("customer",$productb);
 		$this->display();
 	}
 
@@ -251,17 +270,20 @@ class AdminOrderController extends AdminbaseController {
 		foreach($orders as $order){
 			$data = $order;
 			$data['province'] = M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("province");
+            $data['review'] =  M("AmazonAccount")->where(array("id"=>$order['a_id']))->getField("review");
 			$orders_assign[]=$data;
 		}
 		$products = M("AmazonProduct")->select();
 		foreach($products as $product){
 			$producta[$product['id']]=$product['product'];
+            $productb[$product['id']]=$product['customer'];
 		}
 		$this->assign("orders",$orders_assign);
 		$this->assign("Page", $page->show('Admin'));
 		$this->assign("current_page",$page->GetCurrentPage());
 		$this->assign("formget",$_GET);
 		$this->assign("product",$producta);
+        $this->assign("customer",$productb);
 		$this->display();
 	}
 
