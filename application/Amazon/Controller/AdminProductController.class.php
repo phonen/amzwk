@@ -154,7 +154,7 @@ class AdminProductController extends AdminbaseController {
 	}
 
 	public function task(){
-		$where_ands=array("1=1");
+		$where_ands=array("tasknum>0");
 		$fields=array(
 			'pdate'=> array("field"=>"pdate","operator"=>"="),
 		);
@@ -208,6 +208,63 @@ class AdminProductController extends AdminbaseController {
 		$this->assign("formget",$_GET);
 		$this->display();
 	}
+
+
+    public function task_review(){
+        $where_ands=array("taskreview>0");
+        $fields=array(
+            'pdate'=> array("field"=>"pdate","operator"=>"="),
+        );
+        if(IS_POST){
+            foreach ($fields as $param =>$val){
+                if (isset($_POST[$param]) && !empty($_POST[$param])) {
+                    $operator=$val['operator'];
+                    $field   =$val['field'];
+                    $get=$_POST[$param];
+                    $_GET[$param]=$get;
+                    if($operator=="like"){
+                        $get="%$get%";
+                    }
+                    array_push($where_ands, "$field $operator '$get'");
+                }
+            }
+        }
+        else{
+            foreach ($fields as $param =>$val){
+                if (isset($_GET[$param]) && !empty($_GET[$param])) {
+                    $operator=$val['operator'];
+                    $field   =$val['field'];
+                    $get=$_GET[$param];
+                    if($operator=="like"){
+                        $get="%$get%";
+                    }
+                    array_push($where_ands, "$field $operator '$get'");
+                }
+            }
+        }
+        $where= join(" and ", $where_ands);
+        $count=M('AmazonProductTask')
+            ->where($where)
+            ->count();
+
+        $page = $this->page($count, 50);
+        $tasks=M('AmazonProductTask')
+            ->where($where)
+            ->limit($page->firstRow . ',' . $page->listRows)
+            ->select();
+
+        $products = M("AmazonProduct")->select();
+        foreach($products as $product){
+            $producta[$product['id']]=$product['product'];
+        }
+        $this->assign("product",$producta);
+        $this->assign("types",array('b'=>'刷单','c'=>'add cart','w'=>'add wishlist'));
+        $this->assign("tasks",$tasks);
+        $this->assign("Page", $page->show('Admin'));
+        $this->assign("current_page",$page->GetCurrentPage());
+        $this->assign("formget",$_GET);
+        $this->display();
+    }
 
 	public function taskehome(){
 		$where_ands=array("owner='ehome'");
@@ -274,6 +331,16 @@ class AdminProductController extends AdminbaseController {
 		}
 		$this->success("任务数更新成功！");
 	}
+
+    public function taskreview_post(){
+        $model = D("AmazonProductTask");
+        $ids = $_POST['tasknums'];
+        foreach ($ids as $id => $r) {
+            $data['taskreview'] = $r;
+            $model->where(array("id" => $id))->save($data);
+        }
+        $this->success("任务数更新成功！");
+    }
 
 	public function task_delete(){
 		$task_model = M("AmazonProductTask");
@@ -801,6 +868,81 @@ class AdminProductController extends AdminbaseController {
 		}
 	}
 
+
+    function create_review_order(){
+        set_time_limit(0);
+        $products = M("AmazonProduct")->select();
+        foreach ($products as $product){
+            $data = array();
+            $accounts = M("AmazonOrder")->where(array("p_id"=>$product['id']))->field("a_id")->select();
+            $a_ids = array();
+            foreach ($accounts as $account) $a_ids[]=$account['a_id'];
+            $data['id'] = $product['id'];
+            $data['account'] = join(",",$a_ids);
+            $product_account = M("AmazonProductAccount")->where(array("id"=>$product['id']))->find();
+            if($product_account) M("AmazonProductAccount")->save($data);
+            else M("AmazonProductAccount")->add($data);
+        }
+
+        if(isset($_POST['ids'])){
+            $ids=join(",",$_POST['ids']);
+            $tasks = M("AmazonProductTask")->where("id in ($ids)")->select();
+
+            $count=array();
+            $amounts = array();
+            $account_model = M("AmazonAccount");
+            $order_model = M("AmazonOrder");
+
+            foreach ($tasks as $task) {
+                $product = $this->product_model->where(array("id"=>$task['pid']))->find();
+                $little = (($product['amount']/5)-intval($product['amount']/5))*5;
+                //			$subQuery = $order_model->where(array("p_id"=>$product['id']))->field("a_id")->buildSql();
+//				$subQuery = M("AmazonProductAccount")->where(array("id"=>$product['id']))->field("account")->buildSql();
+                $product_account = M("AmazonProductAccount")->where(array("id"=>$product['id']))->field("account")->find();
+                //	$subQuery1 = $order_model->field("a_id,max(otime) ot")->group("a_id")->buildSql();
+                //	$subQuery2 = M()->table($subQuery1.' a')->where("a.ot>DATE_ADD(NOW(), INTERVAL -7 DAY)")->field("a.a_id")->buildSql();
+                //	$accounts = $account_model->where("id not in " . $subQuery . " and id not in " .$subQuery2)->order("rand()")->select();
+                if($product_account['account'] == "") $accounts = $account_model->where("status='1'")->order("rand()")->select();
+                else $accounts = $account_model->where("status='1' and review>'0' and id not in (" . $product_account['account'] . ")")->order("rand()")->select();
+
+                if($accounts){
+                    $i = 0;
+                    foreach($accounts as $account){
+                        $order = $order_model->where("a_id='" . $account['id'] . "' and otime>DATE_ADD(NOW(), INTERVAL -7 DAY)")->find();
+                        if($order) continue;
+                        if(empty($count[$account['id']])) $count[$account['id']] =0;
+                        if($i>=$task['tasknum']) break;
+                        if($count[$account['id']]<1){
+                            $order = array();
+                            $order['a_id'] = $account['id'];
+                            $order['p_id'] = $product['id'];
+                            if($account['amount']>=$product['amount']) {
+                                $c_amount = 0;
+                            }
+                            else if($account['amount']>=$little){
+                                $c_amount = $product['amount'] - $little;
+                            }
+                            else {
+                                $c_amount = $product['amount'] -$little +5;
+                            }
+                            $count[$account['id']] ++;
+                            $i++;
+                            $order['status'] = '-2';
+                            $order['odate'] = $task['pdate'];
+                            $order['c_amount'] = $c_amount;
+                            $order['type'] = 'b';
+                            $order['owner'] = $product['owner'];
+
+                            if($order_model->add($order) !== false) $result += 1;
+                        }
+                    }
+                }
+            }
+
+            $this->success("生成成功$result个！");
+        }
+    }
+
 	function create0(){
 		set_time_limit(0);
 
@@ -910,7 +1052,8 @@ $result =0;
 				$task['pid'] = $data[1];
 				$task['product'] = $data[2];
 				$task['tasknum'] = $data[3];
-				$task['type'] = $data[4];
+                $task['taskreview'] = $data[4];
+				$task['type'] = $data[5];
 
 				$result = M("AmazonProductTask")->add($task);
 			}
