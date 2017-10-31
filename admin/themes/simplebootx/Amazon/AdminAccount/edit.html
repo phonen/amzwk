@@ -77,9 +77,10 @@
 					<label class="control-label">评论：</label>
 					<div class="controls">
 						<select class="select_2" name="account[review]">
-							<option value='' <php>if($formget['status'] == "") echo "selected=true";</php> ></option>
-							<option value='1' <php>if($formget['status'] == "1") echo "selected=true";</php>  >可以</option>
-							<option value='0' <php>if($formget['status'] == "0") echo "selected=true";</php> >不能评</option>
+							<option value='' <php>if($formget['review'] == "") echo "selected=true";</php> ></option>
+							<option value='1' <php>if($formget['review'] == "1") echo "selected=true";</php>  >可以</option>
+							<option value='0' <php>if($formget['review'] == "0") echo "selected=true";</php> >不能评</option>
+							<option value='2' <php>if($formget['review'] == "2") echo "selected=true";</php> >信用卡可评</option>
 						</select> &nbsp;&nbsp;
 					</div>
 				</div>
