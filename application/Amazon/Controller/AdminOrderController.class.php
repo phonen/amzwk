@@ -149,17 +149,17 @@ class AdminOrderController extends AdminbaseController {
 		}
 		$where= join(" and ", $where_ands);
 		if($act == "export"){
-			$str = "ID,日期,IP,帐号,密码,州,产品,券,订单号,刷单人,刷单时间\n";
-			$orders=$this->order_model
-				->where($where)
-				->select();
-			foreach($orders as $order){
-				$account = M("AmazonAccount")->where(array("id"=>$order['a_id']))->find();
-				$product = M("AmazonProduct")->where(array("id"=>$order['p_id']))->find();
-				$str .= $order['id'] . "," . $order['odate'] ."," .$order['lastip'] . "," . $account['username'] . "," . $account['password'] . "," . $order['province'] ."," . $product['product'] . "," . $order['cardno'] . "," .  $order['orderid'] . "," . $order['userid'] . "," . $order['otime'] . "\n";
-			}
+            $str = "ID,日期,IP,帐号,密码,州,产品,券,订单号,刷单人,刷单时间,客户信息,虚拟机编号\n";
+            $orders=$this->order_model
+                ->where($where)
+                ->select();
+            foreach($orders as $order){
+                $account = M("AmazonAccount")->where(array("id"=>$order['a_id']))->find();
+                $product = M("AmazonProduct")->where(array("id"=>$order['p_id']))->find();
+                $str .= $order['id'] . "," . $order['odate'] ."," .$order['lastip'] . "," . $account['username'] . "," . $account['password'] . "," . $order['province'] ."," . $product['product'] . "," . $order['cardno'] . "," .  $order['orderid'] . "," . $order['userid'] . "," . $order['otime'] . "," . $product['customer'] ."," . $account['vm_num'] ."\n";
+            }
 
-		$str = iconv('utf-8','gb2312',$str);
+            $str = iconv('utf-8','gb2312',$str);
 
 			$fileName = date('Ymd').'.csv';
 			export_csv($fileName,$str);
