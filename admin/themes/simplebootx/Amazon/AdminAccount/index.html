@@ -63,7 +63,7 @@
                     <td>{$vo.lastip}</td>
                     <php>$status=array("1"=>"正常","-1"=>"帐号密码错误","-2"=>"帐号需要验证");</php>
                     <td>{$status[$vo['status']]}</td>
-                    <php>$review=array("1"=>"可以","0"=>"不能","2"=>"信用卡可评");</php>
+                    <php>$review=array("1"=>"可以","0"=>"不能","2"=>"信用卡可评","3"=>"警示关联帐号");</php>
                     <td>{$review[$vo['review']]}</td>
                     <td>{$vo.vm_num}</td>
                     <td>{$vo.memo}</td>
