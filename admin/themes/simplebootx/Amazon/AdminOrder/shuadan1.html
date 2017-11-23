@@ -44,8 +44,8 @@
 					</tr>
 					<tr>
 
-						<td colspan="2">刷单金额:   <font color="red">{$vo.amount}</font> </td>
-
+						<td>刷单金额:   <font color="red">{$vo.amount}</font> </td>
+						<td>邮费价格:   <font color="red">{$vo.postfee}</font> </td>
 						<td colspan="3">
 						<php> if($vo['type'] == 'b') {</php>
 							充值卡:   <input type="text" name="order[{$vo.id}][cardno]" value="{$vo.cardno}">

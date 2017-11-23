@@ -61,6 +61,7 @@ class AdminProductController extends AdminbaseController {
 		$this->assign("products",$products);
 		$this->assign("Page", $page->show('Admin'));
 		$this->assign("current_page",$page->GetCurrentPage());
+        $this->assign("formget",$_GET);
 		$this->display();
 	}
 
@@ -111,6 +112,7 @@ class AdminProductController extends AdminbaseController {
 		$this->assign("products",$products);
 		$this->assign("Page", $page->show('Admin'));
 		$this->assign("current_page",$page->GetCurrentPage());
+        $this->assign("formget",$_GET);
 		$this->display();
 	}
 
