@@ -23,7 +23,7 @@
 						<th width="100">产品ID</th>
 						<th width="120">日期</th>
 						<th width="100">产品</th>
-						<th width="100">任务数</th>
+						<th width="100">可评任务数</th>
 						<th width="80">类型</th>
 						<th>操作</th>
 					</tr>
@@ -35,7 +35,7 @@
 					<td>{$vo.pid}</td>
 					<td>{$vo.pdate}</td>
 					<td>{$product[$vo['pid']]}</td>
-					<td><input name="tasknums[{$vo.id}]" class="input input-order" type="text" size="5" value="{$vo.tasknum}" title="ID:{$vo.id}"></td>
+					<td><input name="tasknums[{$vo.id}]" class="input input-order" type="text" size="5" value="{$vo.taskreview}" title="ID:{$vo.id}"></td>
 					<td>{$types[$vo['type']]}</td>
 					<td>
 					</td>
