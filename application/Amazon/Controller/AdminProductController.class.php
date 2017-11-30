@@ -913,7 +913,7 @@ class AdminProductController extends AdminbaseController {
                         $order = $order_model->where("a_id='" . $account['id'] . "' and otime>DATE_ADD(NOW(), INTERVAL -7 DAY)")->find();
                         if($order) continue;
                         if(empty($count[$account['id']])) $count[$account['id']] =0;
-                        if($i>=$task['tasknum']) break;
+                        if($i>=$task['taskreview']) break;
                         if($count[$account['id']]<1){
                             $order = array();
                             $order['a_id'] = $account['id'];

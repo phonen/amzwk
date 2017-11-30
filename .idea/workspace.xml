@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3bdc2ce9-8b1a-4053-bc17-8c1a4ed0fce3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/task_review.html" afterPath="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/task_review.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php" afterPath="$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,17 +35,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminProductController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminProductController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="906" column="114" lean-forward="false" selection-start-line="906" selection-start-column="114" selection-end-line="906" selection-end-column="114" />
+            <state relative-caret-position="648">
+              <caret line="915" column="48" lean-forward="false" selection-start-line="915" selection-start-column="48" selection-end-line="915" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_review.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task_review.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/task_review.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-216">
@@ -112,8 +112,8 @@
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminOrder/shuadan1.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/index.html" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/indexehome.html" />
-        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php" />
         <option value="$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/task_review.html" />
+        <option value="$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php" />
       </list>
     </option>
   </component>
@@ -535,7 +535,7 @@
       <workItem from="1511427526056" duration="643000" />
       <workItem from="1511627238973" duration="17000" />
       <workItem from="1512007691433" duration="1421000" />
-      <workItem from="1512012159245" duration="56000" />
+      <workItem from="1512012159245" duration="210000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1498542079145</created>
@@ -782,11 +782,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512009614496</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="1">
+      <created>1512012232365</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1512012232365</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43343000" />
+    <option name="totallyTimeSpent" value="43497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -1179,18 +1186,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="906" column="114" lean-forward="false" selection-start-line="906" selection-start-column="114" selection-end-line="906" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/themes/simplebootx/Amazon/AdminProduct/task_review.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
           <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Amazon/Controller/AdminProductController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="915" column="48" lean-forward="false" selection-start-line="915" selection-start-column="48" selection-end-line="915" selection-end-column="48" />
           <folding />
         </state>
       </provider>
