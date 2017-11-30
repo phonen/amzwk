@@ -904,8 +904,8 @@ class AdminProductController extends AdminbaseController {
                 //	$subQuery1 = $order_model->field("a_id,max(otime) ot")->group("a_id")->buildSql();
                 //	$subQuery2 = M()->table($subQuery1.' a')->where("a.ot>DATE_ADD(NOW(), INTERVAL -7 DAY)")->field("a.a_id")->buildSql();
                 //	$accounts = $account_model->where("id not in " . $subQuery . " and id not in " .$subQuery2)->order("rand()")->select();
-                if($product_account['account'] == "") $accounts = $account_model->where("status='1' and review>'0'")->order("rand()")->select();
-                else $accounts = $account_model->where("status='1' and review>'0' and id not in (" . $product_account['account'] . ")")->order("rand()")->select();
+                if($product_account['account'] == "") $accounts = $account_model->where("status='1' and review>'0'and review<'3' ")->order("rand()")->select();
+                else $accounts = $account_model->where("status='1' and review>'0' and review<'3' and id not in (" . $product_account['account'] . ")")->order("rand()")->select();
 
                 if($accounts){
                     $i = 0;
